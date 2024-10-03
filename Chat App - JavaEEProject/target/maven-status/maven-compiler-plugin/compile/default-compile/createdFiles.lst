@@ -1,0 +1,15 @@
+com\mycompany\javaeeproject\JakartaRestConfiguration.class
+Servlets\ConversationsServlet.class
+Servlets\ChatServlet.class
+Servlets\HomeServlet.class
+Servlets\RegistrationServlet.class
+DataTransferObjects\Conversation.class
+DataTransferObjects\Message.class
+com\mycompany\javaeeproject\resources\JakartaEE10Resource.class
+Beans\User.class
+DataTransferObjects\MessageAndConversationDao.class
+Beans\UserDao.class
+DataTransferObjects\MessageDecoder.class
+Servlets\LoginServlet.class
+DataTransferObjects\MessageEncoder.class
+Servlets\ChatEndpoint.class

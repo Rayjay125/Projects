@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        .fullscreen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+            width: 100%;
+
+            background-color: rgb(250, 250, 250);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .phone-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 300px;
+            height: 600px;
+        }
+
+        .phone-screen h1 {
+            color: rgb(20, 180, 233);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: 60px;
+        }
+
+        #username,
+        #password {
+            border-radius: 8px;
+            border: solid 3px rgba(166, 166, 166, 0.266);
+            height: 40px;
+            width: 240px;
+            margin-top: 15px;
+
+            text-align: center;
+        }
+
+        #login,
+        #register {
+            border-radius: 20px;
+            border: none;
+            padding: 8px 16px;
+            margin-top: 30px;
+
+            background-color: rgb(20, 180, 233);
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+
+    <div class="fullscreen">
+        <div class="phone-screen">
+            <h1>Mzanzi Chat Zone</h1>
+            <form class="login-form" action="LoginServlet" method="Get">
+                <input type="text" id="username" name="username" placeholder="Enter Username"><br>
+                <input type="text" id="password" name="password" placeholder="Enter Password"><br>
+                <input type="submit" id="login" name="login" value="Login"><br>
+                <p style="font-size: small;">Don't have an account? <a href="Registration.html"><u>Sign up!</u></a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
