@@ -1,0 +1,10 @@
+/* Make page look blank */
+
+body {
+    background: #fff; 
+    color: #fff;
+}
+
+body > * {
+    display: none;
+}

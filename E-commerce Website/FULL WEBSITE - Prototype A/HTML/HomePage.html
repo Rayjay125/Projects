@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/HomeStyles.css">
+</head>
+
+<body>
+    <!--Navigation-->
+    <link rel="stylesheet" href="../CSS/NavigationStyles.css">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Reed Shoe Emporium</h1>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="../HTML/HomePage.html">Home</a></li>
+                    <li><a href="../PHP/ProductCatalogue.php">Products</a></li>
+                    <li><a href="../PHP/ShoppingCart.php">Shopping Cart</a></li>
+                    <li><a href="../HTML/AboutUs.html">About</a></li>
+                    <li><a href="../PHP/ContactUsPage.php">Contact</a></li>
+                    <li><a href="../PHP/LoginPage.php">Sign in</a></li>
+                    <li><a href="../PHP/RegistrationPage.php">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Other hompage features -->
+    <div class="hero">
+        <h1>Welcome to the Reed Shoe Emporium</h1>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="../Images/Feature1.jpg" alt="Feature 1">
+            <h2>Browse Shoe Catalogue</h2>
+            <p>Peruse our wide collection of stylish shoes</p>
+        </div>
+        <div class="feature">
+            <img src="../Images/Feature2.png" alt="Feature 2">
+            <h2>Shop Online</h2>
+            <p>Add products to the shopping cart and buy online</p>
+        </div>
+        <div class="feature">
+            <img src="../Images/Feature3.jpg" alt="Feature 3">
+            <h2>Become A Member</h2>
+            <p>Create an account and be updated on the latest and juiciest offers for members only</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Reed Shoe Emporium. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to update the current year at the footer -->
+    <script>
+        document.getElementById('currentYear').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>

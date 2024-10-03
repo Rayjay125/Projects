@@ -1,0 +1,134 @@
+/* Global Styles */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #2752f0, #1acdff);
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Makes the link text not to wrap */
+    overflow-x: hidden; /* Hide the scrollbar by default */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    height: auto; /* Ensure height does not cause vertical scrolling */
+}
+
+.navbar:hover {
+    overflow-x: auto; /* Show scrollbar on hover */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-space {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Garamond', cursive;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 8px 16px;
+    height: auto;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1000px) {
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Scroll bar styles */
+/* WebKit (For Chrome, Safari, Edge) */
+.navbar::-webkit-scrollbar {
+    height: 2px; /* Adjust height for horizontal scrollbar */
+    display: none; /* Hide the scrollbar */
+}
+
+.navbar:hover::-webkit-scrollbar {
+    display: block; /* Show scrollbar on hover */
+}
+
+.navbar::-webkit-scrollbar-track {
+    background: #99ddf2;
+    border-radius: 2px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+    background: #7294f0;
+    border-radius: 2px;
+}
+
+.navbar::-webkit-scrollbar-thumb:hover {
+    background: #4a3ce3;
+}
+
+/* Firefox */
+.navbar {
+    scrollbar-width: none; /* Hide scrollbar by default */
+}
+
+.navbar:hover {
+    scrollbar-width: thin; /* Show thin scrollbar on hover */
+    scrollbar-color: #4350fe #3a8cf7;
+}

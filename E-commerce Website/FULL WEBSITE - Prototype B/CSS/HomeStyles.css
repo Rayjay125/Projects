@@ -1,0 +1,83 @@
+.body{
+    min-width: 400px;
+}
+.hero {
+    background-image: url("../Images/Homepage hero4.jpg");
+    background-color: #fcfcfc;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: #130749;
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f8f8e0;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.feature img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    margin: 0;
+}
+
+.feature p {
+    color: #666;
+}
+
+footer {
+    background-color: #150f4e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 800px) {
+    .features {
+        display: flex;
+        width: auto;
+        padding: auto;
+    }
+    .feature {
+        padding: auto;
+        width: fit-content;
+        flex: 0;
+        display: inline-block;
+    }
+    .feature img {
+        max-width: auto;
+    }
+}
+@media (max-width: 450px) {
+    .features {
+        display: block;
+    }
+    .feature {
+        margin: auto;
+        display: block;
+    }
+}
