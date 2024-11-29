@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayhan Alobwede Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+
+    <script src="Script.js"></script>
+
+    <!-- EmailJS script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "RzJFZ6QFQhy5DU2lw",
+            });
+        })();
+    </script>
+    <script>
+        function sendEmail(){
+            event.preventDefault();
+
+            var senderName= document.getElementById("senderName").value;
+            var senderEmail= document.getElementById("senderEmail").value;
+            var subject= document.getElementById("emailSubject").value;
+            var message= document.getElementById("emailMessage").value;
+
+            var templateParams = {
+            from_name: senderName,
+            from_email: senderEmail,
+            subject: subject,
+            message: message
+            };
+
+            emailjs.send('service_j1so8pk', 'template_4i9lwiq', templateParams).then(
+            (response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert("Message received!");
+            },
+            (error) => {
+                console.log('FAILED...', error);
+                alert("Error sending message");
+            },
+            );
+        }
+    </script>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="Files/Rayhan Alobwede CV.pdf" download>Download My CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="profileDiv">
+            <img src="Images/RayhanProfilePic.jpg">
+            <h1>Rayhan Alobwede</h1>
+        </div><br>
+
+        <h1>About Me</h1>
+        <p>Hi! I am Rayhan Alobwede, a junior full-stack software developer with skills in building robust and scalable web apps.</p>
+        <p>I enjoy coding and solving complex problems with software solutions.</p>
+
+        <h2>My Coding Skills</h2>
+        <div class="skillList">
+            <div class="skill">Html</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PHP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Oracle</div>
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">C++</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Project 1: E-commerce platform</h3>
+                <img class="projectImg" src="Images/Project1.png">
+                <p><b>Technology:</b> Html, CSS, JavaScript, PHP, MySQL</p>
+                <p><b>Description:</b> An e-commerce platform with a focus on seamless UX, featuring user registration and login, a product catalogue, a shopping cart, and online payment. <a class="githubLink" href="https://github.com/Rayjay125/Projects/tree/main/E-commerce%20Website">(Source code on Github)</a></p>
+            </div>
+            <div class="project">
+                <h3>Project 2: Conway's game of life</h3>
+                <img class="projectImg" src="Images/Project2.png">
+                <p><b>Technology:</b> Python</p>
+                <p><b>Description:</b> Conway's game of life with an example starting state, and the option of choosing a custom starting state, input variables, and output character display. <a class="githubLink" href="https://github.com/Rayjay125/MiniProjects/blob/main/Conway's%20Game%20of%20Life.py">(Source code on Github)</a></p>
+            </div>
+            <div class="project">
+                <h3>Project 3: Chat Web-Application</h3>
+                <img class="projectImg" src="Images/Project3.png">
+                <p><b>Technology:</b> Java, Html, CSS, JavaScript</p>
+                <p><b>Description:</b> Chat app that runs on a browser, enabling users to create accounts and chat with other users of the app. <a class="githubLink" href="https://github.com/Rayjay125/Projects/tree/main/Chat%20App%20-%20JavaEEProject">(Source code on Github)</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contactDiv">
+            <div>
+                <h2>Contact Me</h2>
+                <br><br>
+                <p>Email: rayhanalobwede@gmail.com</p>
+                <p>Phone: +27833733832</p>
+                <br><br>
+            </div>
+            <div class="messageDiv">
+                <h2>Send Me a Message</h2>
+                <form>
+                    <input type="text" id="senderName" placeholder="Full Name" required>
+                    <input type="email" id="senderEmail"placeholder="Email" required>
+                    <input type="text" id="emailSubject" placeholder="Subject">
+                    <textarea id="emailMessage" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" onclick="sendEmail()">Send</button>
+                </form>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&#169; <span id="currentYear">2024</span> Rayhan Alobwede | All rights reserved</p>
+        <script>
+            //Update current year at footer
+            document.getElementById('currentYear').innerText = new Date().getFullYear();
+        </script>
+    </footer>
+
+</body>
+</html>
